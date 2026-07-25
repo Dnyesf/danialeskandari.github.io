@@ -1,0 +1,6 @@
+{
+  "name": "Academic Profile",
+  "description": "A personal academic website based on academicpages.github.io, featuring publications, talks, teaching, and CV sections.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

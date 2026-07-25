@@ -1,0 +1,16 @@
+{
+  "name": "Danial Eskandari Faruji",
+  "short_name": "Danial AI",
+  "description": "Personal website of Danial Eskandari Faruji, AI Researcher.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
