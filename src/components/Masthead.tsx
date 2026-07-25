@@ -75,7 +75,7 @@ export default function Masthead() {
             className="flex-1 overflow-x-auto no-scrollbar flex space-x-6 h-full items-center relative pr-8 pl-8"
           >
             {siteData.nav.map((item) => {
-              const isActive = location.pathname === item.path;
+              const isActive = location.pathname === item.path || (item.path !== '/' && location.pathname.startsWith(item.path));
               return (
                 <li key={item.path} 
                   data-active={isActive}
@@ -110,7 +110,7 @@ export default function Masthead() {
           {siteData.nav.map((item) => (
             <li key={item.path} className={clsx(
               'h-full flex items-center transition-colors',
-              location.pathname === item.path
+              location.pathname === item.path || (item.path !== '/' && location.pathname.startsWith(item.path))
                 ? 'text-stone-900 dark:text-stone-100 border-b-2 border-stone-900 dark:border-stone-100 -mb-[2px]'
                 : 'hover:text-stone-900 dark:hover:text-stone-100 border-b-2 border-transparent -mb-[2px]'
             )}>

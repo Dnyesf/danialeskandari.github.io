@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { blogs } from '../data';
 import { useSEO } from '../hooks/useSEO';
+import BlurImage from '../components/BlurImage';
 
 export default function Blog() {
   useSEO({
@@ -21,7 +22,7 @@ export default function Blog() {
             </Link>
             {post.image && (
               <div className="w-full h-48 bg-white dark:bg-stone-900 overflow-hidden border-b border-stone-200 dark:border-stone-800 p-2">
-                <img loading="lazy" src={post.image} alt={post.title} width="400" height="224" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out" />
+                <BlurImage loading="lazy" src={post.image} alt={post.title} width="400" height="224" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
             )}
             <div className="p-6 flex flex-col gap-3 flex-1">

@@ -4,6 +4,8 @@ import { useSEO } from '../hooks/useSEO';
 import { Link, useLocation } from 'react-router-dom';
 import { Folder } from 'lucide-react';
 
+import BlurImage from '../components/BlurImage';
+
 export default function Publications() {
   const location = useLocation();
 
@@ -20,8 +22,7 @@ export default function Publications() {
   }, [location]);
 
   const jsonLd = useMemo(() => {
-    return publications.map((pub) => ({
-      "@context": "https://schema.org",
+    const articles = publications.map((pub) => ({
       "@type": "ScholarlyArticle",
       "headline": pub.title,
       "author": {
@@ -37,6 +38,15 @@ export default function Publications() {
       "url": pub.url,
       "image": `https://danialeskandari.com/${pub.image}`
     }));
+
+    return [{
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Publications | Danial Eskandari Faruji",
+      "description": "Academic publications, papers, and research works in Biomedical AI and Machine Learning by Danial Eskandari Faruji.",
+      "url": "https://danialeskandari.com/publications",
+      "hasPart": articles
+    }];
   }, []);
 
   useSEO({
@@ -51,10 +61,10 @@ export default function Publications() {
       
       <div className="space-y-8">
         {publications.map((pub, index) => (
-          <div id={pub.id} key={index} className="bg-white dark:bg-stone-900 p-6 rounded-lg border border-stone-200 dark:border-stone-800 shadow-sm relative group hover:border-stone-300 dark:border-stone-700 transition-colors flex flex-col sm:flex-row gap-6 scroll-mt-24">
-            <div className="w-full sm:w-48 h-32 sm:h-auto shrink-0 rounded overflow-hidden bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 p-2">
-              <Link to={`/publications/${pub.id}`} className="block w-full h-full">
-                <img loading="lazy" src={pub.image} alt={pub.title} width="192" height="128" className="w-full h-full object-contain" />
+          <div id={pub.id} key={index} className="bg-white dark:bg-stone-900 p-6 rounded-lg border border-stone-200 dark:border-stone-800 shadow-sm relative group hover:border-stone-300 dark:border-stone-700 transition-colors flex flex-col sm:flex-row items-start gap-6 scroll-mt-24">
+            <div className="shrink-0 rounded overflow-hidden bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 p-2 self-start">
+              <Link to={`/publications/${pub.id}`} className="block">
+                <BlurImage loading="lazy" src={pub.image} alt={pub.title} className="w-auto" imgClassName="w-auto h-auto object-contain max-w-full sm:max-w-48" />
               </Link>
             </div>
             <div className="flex-1 flex flex-col">
@@ -94,9 +104,9 @@ export default function Publications() {
                     Code
                   </a>
                 )}
-                {pub.relatedProject && (
+                {(pub as any).relatedProject && (
                   <Link 
-                    to={`/projects#${pub.relatedProject}`}
+                    to={`/projects/${(pub as any).relatedProject}`}
                     className="inline-flex items-center justify-center px-4 py-1.5 text-xs font-medium text-stone-700 dark:text-stone-300 bg-white dark:bg-stone-900 hover:bg-stone-50 dark:hover:bg-stone-950 rounded border border-stone-300 dark:border-stone-700 transition-colors"
                   >
                     <Folder className="w-4 h-4 mr-2" />

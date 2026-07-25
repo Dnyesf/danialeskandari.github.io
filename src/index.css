@@ -7,10 +7,45 @@
   --font-serif: "Merriweather", serif;
 }
 
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  background-color: #fafaf9;
+}
+html.dark {
+  background-color: #0c0a09;
+}
+
 @utility no-scrollbar {
   &::-webkit-scrollbar {
     display: none;
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+.theme-transition-to-dark::view-transition-old(root) {
+  z-index: 2;
+}
+.theme-transition-to-dark::view-transition-new(root) {
+  z-index: 1;
+}
+
+.theme-transition-to-light::view-transition-old(root) {
+  z-index: 1;
+}
+.theme-transition-to-light::view-transition-new(root) {
+  z-index: 2;
 }

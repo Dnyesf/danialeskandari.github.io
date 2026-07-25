@@ -3,6 +3,7 @@ import { projects } from '../data';
 import { Github, FileText } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
+import BlurImage from '../components/BlurImage';
 
 export default function Projects() {
   const location = useLocation();
@@ -42,17 +43,27 @@ export default function Projects() {
       
       <div className="space-y-8">
         {projects.map((project, index) => (
-          <div id={project.id} key={index} className="bg-white dark:bg-stone-900 p-6 rounded-lg border border-stone-200 dark:border-stone-800 shadow-sm relative group hover:border-stone-300 dark:border-stone-700 transition-colors flex flex-col sm:flex-row gap-6 scroll-mt-24">
-            <div className="w-full sm:w-[250px] h-48 sm:h-auto shrink-0 rounded overflow-hidden bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
-              <img loading="lazy" src={project.image} alt={project.title} width="250" height="192" className="w-full h-full object-cover object-center" />
+          <div id={project.id} key={index} className="bg-white dark:bg-stone-900 p-6 rounded-lg border border-stone-200 dark:border-stone-800 shadow-sm relative group hover:border-stone-300 dark:border-stone-700 transition-colors flex flex-col sm:flex-row items-start gap-6 scroll-mt-24">
+            <div className="shrink-0 rounded overflow-hidden bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 p-2 self-start">
+              <Link to={`/projects/${project.id}`} className="block">
+                <BlurImage loading="lazy" src={project.image} alt={project.title} className="w-auto" imgClassName="w-auto h-auto object-contain max-w-full sm:max-w-[250px]" />
+              </Link>
             </div>
             <div className="flex-1">
-              <h2 className="font-serif italic font-bold text-base sm:text-lg text-stone-900 dark:text-stone-100 mb-2 group-hover:text-stone-700 dark:text-stone-300 transition-colors">
-                {project.title}
-              </h2>
+              <Link to={`/projects/${project.id}`}>
+                <h2 className="font-serif italic font-bold text-base sm:text-lg text-stone-900 dark:text-stone-100 mb-2 group-hover:text-stone-700 dark:text-stone-300 transition-colors">
+                  {project.title}
+                </h2>
+              </Link>
               <p className="text-sm text-stone-600 dark:text-stone-400 mb-6">{project.description}</p>
               
-              <div className="flex gap-3 mt-auto">
+              <div className="flex flex-wrap gap-3 mt-auto">
+                <Link
+                  to={`/projects/${project.id}`}
+                  className="inline-flex items-center justify-center px-4 py-1.5 text-xs font-medium text-white bg-stone-800 hover:bg-stone-900 dark:bg-stone-200 dark:text-stone-900 dark:hover:bg-white rounded border border-stone-800 dark:border-stone-200 transition-colors"
+                >
+                  View Details
+                </Link>
                 <a 
                   href={project.githubUrl} 
                   target="_blank" 
@@ -65,8 +76,8 @@ export default function Projects() {
                 
                 {project.relatedPublication && (
                   <Link 
-                    to={`/publications#${project.relatedPublication}`}
-                    className="inline-flex items-center justify-center px-4 py-1.5 text-xs font-medium text-white bg-stone-800 hover:bg-stone-900 dark:bg-stone-200 dark:text-stone-900 dark:hover:bg-white rounded border border-stone-800 dark:border-stone-200 transition-colors"
+                    to={`/publications/${project.relatedPublication}`}
+                    className="inline-flex items-center justify-center px-4 py-1.5 text-xs font-medium text-stone-700 dark:text-stone-300 bg-white dark:bg-stone-900 hover:bg-stone-50 dark:hover:bg-stone-950 rounded border border-stone-300 dark:border-stone-700 transition-colors"
                   >
                     <FileText className="w-4 h-4 mr-2" />
                     Related Publication

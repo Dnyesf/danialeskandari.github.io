@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSEO } from '../hooks/useSEO';
+import BlurImage from '../components/BlurImage';
 
 export default function About() {
   useSEO({
@@ -69,7 +70,7 @@ export default function About() {
             <div className="flex flex-col sm:flex-row sm:items-center mb-1">
               <span className="text-stone-900 dark:text-stone-100 font-medium sm:w-1/3">Co-founder</span>
               <span className="text-stone-600 dark:text-stone-400 sm:w-1/2 font-semibold flex items-center gap-2">
-                <img loading="lazy" src="/assets/images/aryaspace-group-logo.webp" alt="Aryaspace group" width="16" height="16" className="h-4 w-auto object-contain shrink-0 rounded-sm" />
+                <BlurImage loading="lazy" src="/assets/images/aryaspace-group-logo.webp" alt="Aryaspace group" width="16" height="16" className="h-4 w-auto object-contain shrink-0 rounded-sm" />
                 Aryaspace group
               </span>
               <span className="text-stone-400 dark:text-stone-500 font-mono text-xs sm:w-1/6 sm:text-right mt-1 sm:mt-0">2025 - Present</span>
@@ -78,20 +79,9 @@ export default function About() {
           </li>
           <li>
             <div className="flex flex-col sm:flex-row sm:items-center mb-1">
-              <span className="text-stone-900 dark:text-stone-100 font-medium sm:w-1/3">AI Researcher</span>
-              <span className="text-stone-600 dark:text-stone-400 sm:w-1/2 font-semibold flex items-center gap-2">
-                <img loading="lazy" src="/assets/images/secure-intelligent-systems-lab-logo.webp" alt="Secure Intelligent Systems Laboratory" width="16" height="16" className="h-4 w-auto object-contain shrink-0 rounded-sm" />              
-                Secure Intelligent Systems Laboratory
-              </span>
-              <span className="text-stone-400 dark:text-stone-500 font-mono text-xs sm:w-1/6 sm:text-right mt-1 sm:mt-0">2025 - Present</span>
-            </div>
-            <p className="text-stone-500 dark:text-stone-400 sm:pl-[33.333%]">Conducting research in Artificial Intelligence, Machine Learning, Deep Learning, and AI-driven Cybersecurity under the supervision of Dr. Javad Hamidzadeh at Sadjad University. Contributing to scientific publications and collaborative research projects.</p>
-          </li>
-          <li>
-            <div className="flex flex-col sm:flex-row sm:items-center mb-1">
               <span className="text-stone-900 dark:text-stone-100 font-medium sm:w-1/3">Back-end Developer</span>
               <span className="text-stone-600 dark:text-stone-400 sm:w-1/2 font-semibold flex items-center gap-2">
-                <img loading="lazy" src="https://ferdowsiaccelerator.ir/wp-content/uploads/2017/10/logo400.png" alt="VEERASENSE HOLDING" width="16" height="16" className="h-4 w-4 object-contain shrink-0 rounded-sm bg-white pl-[1px]" />
+                <BlurImage loading="lazy" src="https://ferdowsiaccelerator.ir/wp-content/uploads/2017/10/logo400.png" alt="VEERASENSE HOLDING" className="h-[15px] w-[45px] shrink-0 rounded-sm bg-white" imgClassName="w-[49px] h-[16px] object-contain bg-white" />
                 VEERASENSE HOLDING
               </span>
               <span className="text-stone-400 dark:text-stone-500 font-mono text-xs sm:w-1/6 sm:text-right mt-1 sm:mt-0">2024 - Present</span>
@@ -106,7 +96,7 @@ export default function About() {
             <div className="flex flex-col sm:flex-row sm:items-center mb-1">
               <span className="text-stone-900 dark:text-stone-100 font-medium sm:w-1/3">Back-end Developer</span>
               <span className="text-stone-600 dark:text-stone-400 sm:w-1/2 font-semibold flex items-center gap-2">
-                <img loading="lazy" src="https://media.licdn.com/dms/image/v2/C4E0BAQGvQTVxHjXgkA/company-logo_200_200/company-logo_200_200/0/1659949282076?e=2147483647&v=beta&t=n3GTmk5Or2yJKy0rfrJYobFOaFOHezarkXtYMSQp-u8" alt="NEUROSINA" width="16" height="16" className="h-4 w-auto object-contain shrink-0 rounded-sm bg-white pl-[1px] pt-[1px] pr-0 pb-0" />
+                <BlurImage loading="lazy" src="https://media.licdn.com/dms/image/v2/C4E0BAQGvQTVxHjXgkA/company-logo_200_200/company-logo_200_200/0/1659949282076?e=2147483647&v=beta&t=n3GTmk5Or2yJKy0rfrJYobFOaFOHezarkXtYMSQp-u8" alt="NEUROSINA" width="16" height="16" className="h-4 w-auto object-contain shrink-0 rounded-sm bg-white pl-[1px] pt-[1px] pr-0 pb-0" />
                 NEUROSINA
               </span>
               <span className="text-stone-400 dark:text-stone-500 font-mono text-xs sm:w-1/6 sm:text-right mt-1 sm:mt-0">2023 - 2025</span>
@@ -117,7 +107,7 @@ export default function About() {
             <div className="flex flex-col sm:flex-row sm:items-center mb-1">
               <span className="text-stone-900 dark:text-stone-100 font-medium sm:w-1/3">AI Specialist</span>
               <span className="text-stone-600 dark:text-stone-400 sm:w-1/2 font-semibold flex items-center gap-2">
-                <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY7BHFzapnVSPAZUDV5lSRDRafB_rmjD3bbEDSoTCADQ&s=10" alt="FUM CARE" width="16" height="16" className="h-4 w-auto object-contain shrink-0 rounded-sm" />
+                <BlurImage loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY7BHFzapnVSPAZUDV5lSRDRafB_rmjD3bbEDSoTCADQ&s=10" alt="FUM CARE" width="16" height="16" className="h-4 w-auto object-contain shrink-0 rounded-sm" />
                 FUM CARE
               </span>
               <span className="text-stone-400 dark:text-stone-500 font-mono text-xs sm:w-1/6 sm:text-right mt-1 sm:mt-0">Jun 2022 - 2024</span>
@@ -143,7 +133,7 @@ export default function About() {
           <li className="flex flex-col sm:flex-row sm:items-center">
             <div className="text-stone-900 dark:text-stone-100 font-medium sm:w-1/2 flex items-center gap-3">
               <div className="w-5 h-5 bg-stone-200 dark:bg-stone-800 rounded-sm shrink-0 overflow-hidden flex items-center justify-center">
-                <img loading="lazy" src="/assets/images/hakim-sabzevari-university-logo.webp" alt="Hakim Sabzevari University" width="48" height="48" className="w-full h-full object-cover bg-white" />
+                <BlurImage loading="lazy" src="/assets/images/hakim-sabzevari-university-logo.webp" alt="Hakim Sabzevari University" width="48" height="48" className="w-full h-full object-cover bg-white" />
               </div>
               <span>B.Sc. in Computer Engineering</span>
             </div>
@@ -153,7 +143,7 @@ export default function About() {
           <li className="flex flex-col sm:flex-row sm:items-center">
             <div className="text-stone-900 dark:text-stone-100 font-medium sm:w-1/2 flex items-center gap-3">
               <div className="w-5 h-5 bg-stone-200 dark:bg-stone-800 rounded-sm shrink-0 overflow-hidden flex items-center justify-center">
-                <img loading="lazy" src="/assets/images/imam-reza-high-school-logo.webp" alt="Imam Reza high school" width="48" height="48" className="w-full h-full object-cover bg-white dark:bg-stone-900" />
+                <BlurImage loading="lazy" src="/assets/images/imam-reza-high-school-logo.webp" alt="Imam Reza high school" width="48" height="48" className="w-full h-full object-cover bg-white dark:bg-stone-900" />
               </div>
               <span>Mathematics and Physics</span>
             </div>
@@ -169,7 +159,7 @@ export default function About() {
           <li className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
             <div className="flex items-center gap-3">
               <div className="w-5 h-5 bg-stone-200 dark:bg-stone-800 rounded-sm shrink-0 overflow-hidden flex items-center justify-center">
-                <img loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAVFBMVEX////6/f6x1+tsudwpotEAl8xitdqm0ujy+fyGxOEAk8oAlcsAms0AmMwAkcnS6PO43O0AkMmXzOXo9PmPyONVsNfg8PdBqdQxpdLu9/t+wN/K5fHHhPk6AAAA8klEQVR4AazRwZqCMAxF4QiNlPYmgIgU5/3fczCfdKLO0rNq+zeLAn2hU9MG5nDu4qf1KTMAkaztGw/MqLGO3sZJ4NOLm5sA1sRWTrxrU5EFuZ2PXezTrse2Z3BLritDlucbEpBm8mVAb7Zq8o700gpwb6uWP1GAYquAf/A4YofjXFFjxfoxtlcMUnGGmBrayfkPaXuooQQ76LKhU3vK3fZRAd0OjQ8VIA10PFT2e3WWWSCFqI6mK7lZYBrq79yVU1lLWdelo1MQd5cuimciOf8s2pKrUUEtTfucb16UTYRTGei9W1+Sqoa7J1+MvyM+nQMAnnIQMvUA3IsAAAAASUVORK5CYII=" alt="PHP" width="20" height="20" className="w-full h-full object-cover" />
+                <BlurImage loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAVFBMVEX////6/f6x1+tsudwpotEAl8xitdqm0ujy+fyGxOEAk8oAlcsAms0AmMwAkcnS6PO43O0AkMmXzOXo9PmPyONVsNfg8PdBqdQxpdLu9/t+wN/K5fHHhPk6AAAA8klEQVR4AazRwZqCMAxF4QiNlPYmgIgU5/3fczCfdKLO0rNq+zeLAn2hU9MG5nDu4qf1KTMAkaztGw/MqLGO3sZJ4NOLm5sA1sRWTrxrU5EFuZ2PXezTrse2Z3BLritDlucbEpBm8mVAb7Zq8o700gpwb6uWP1GAYquAf/A4YofjXFFjxfoxtlcMUnGGmBrayfkPaXuooQQ76LKhU3vK3fZRAd0OjQ8VIA10PFT2e3WWWSCFqI6mK7lZYBrq79yVU1lLWdelo1MQd5cuimciOf8s2pKrUUEtTfucb16UTYRTGei9W1+Sqoa7J1+MvyM+nQMAnnIQMvUA3IsAAAAASUVORK5CYII=" alt="PHP" width="20" height="20" className="w-full h-full object-cover" />
               </div>
               <span className="text-stone-900 dark:text-stone-100 font-medium">Project-Oriented course in Web Development with PHP</span>
             </div>
@@ -181,7 +171,7 @@ export default function About() {
           <li className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
             <div className="flex items-center gap-3">
               <div className="w-5 h-5 bg-stone-200 dark:bg-stone-800 rounded-sm shrink-0 overflow-hidden flex items-center justify-center">
-                <img loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAVFBMVEX////6/f6x1+tsudwpotEAl8xitdqm0ujy+fyGxOEAk8oAlcsAms0AmMwAkcnS6PO43O0AkMmXzOXo9PmPyONVsNfg8PdBqdQxpdLu9/t+wN/K5fHHhPk6AAAA8klEQVR4AazRwZqCMAxF4QiNlPYmgIgU5/3fczCfdKLO0rNq+zeLAn2hU9MG5nDu4qf1KTMAkaztGw/MqLGO3sZJ4NOLm5sA1sRWTrxrU5EFuZ2PXezTrse2Z3BLritDlucbEpBm8mVAb7Zq8o700gpwb6uWP1GAYquAf/A4YofjXFFjxfoxtlcMUnGGmBrayfkPaXuooQQ76LKhU3vK3fZRAd0OjQ8VIA10PFT2e3WWWSCFqI6mK7lZYBrq79yVU1lLWdelo1MQd5cuimciOf8s2pKrUUEtTfucb16UTYRTGei9W1+Sqoa7J1+MvyM+nQMAnnIQMvUA3IsAAAAASUVORK5CYII=" alt="Python" width="20" height="20" className="w-full h-full object-cover" />
+                <BlurImage loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAVFBMVEX////6/f6x1+tsudwpotEAl8xitdqm0ujy+fyGxOEAk8oAlcsAms0AmMwAkcnS6PO43O0AkMmXzOXo9PmPyONVsNfg8PdBqdQxpdLu9/t+wN/K5fHHhPk6AAAA8klEQVR4AazRwZqCMAxF4QiNlPYmgIgU5/3fczCfdKLO0rNq+zeLAn2hU9MG5nDu4qf1KTMAkaztGw/MqLGO3sZJ4NOLm5sA1sRWTrxrU5EFuZ2PXezTrse2Z3BLritDlucbEpBm8mVAb7Zq8o700gpwb6uWP1GAYquAf/A4YofjXFFjxfoxtlcMUnGGmBrayfkPaXuooQQ76LKhU3vK3fZRAd0OjQ8VIA10PFT2e3WWWSCFqI6mK7lZYBrq79yVU1lLWdelo1MQd5cuimciOf8s2pKrUUEtTfucb16UTYRTGei9W1+Sqoa7J1+MvyM+nQMAnnIQMvUA3IsAAAAASUVORK5CYII=" alt="Python" width="20" height="20" className="w-full h-full object-cover" />
               </div>
               <span className="text-stone-900 dark:text-stone-100 font-medium">Task-Oriented course in Data Analysis with Python</span>
             </div>
@@ -193,7 +183,7 @@ export default function About() {
           <li className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
             <div className="flex items-center gap-3">
               <div className="w-5 h-5 bg-stone-200 dark:bg-stone-800 rounded-sm shrink-0 overflow-hidden flex items-center justify-center">
-                <img loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAVFBMVEX////6/f6x1+tsudwpotEAl8xitdqm0ujy+fyGxOEAk8oAlcsAms0AmMwAkcnS6PO43O0AkMmXzOXo9PmPyONVsNfg8PdBqdQxpdLu9/t+wN/K5fHHhPk6AAAA8klEQVR4AazRwZqCMAxF4QiNlPYmgIgU5/3fczCfdKLO0rNq+zeLAn2hU9MG5nDu4qf1KTMAkaztGw/MqLGO3sZJ4NOLm5sA1sRWTrxrU5EFuZ2PXezTrse2Z3BLritDlucbEpBm8mVAb7Zq8o700gpwb6uWP1GAYquAf/A4YofjXFFjxfoxtlcMUnGGmBrayfkPaXuooQQ76LKhU3vK3fZRAd0OjQ8VIA10PFT2e3WWWSCFqI6mK7lZYBrq79yVU1lLWdelo1MQd5cuimciOf8s2pKrUUEtTfucb16UTYRTGei9W1+Sqoa7J1+MvyM+nQMAnnIQMvUA3IsAAAAASUVORK5CYII=" alt="Python" width="20" height="20" className="w-full h-full object-cover" />
+                <BlurImage loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAVFBMVEX////6/f6x1+tsudwpotEAl8xitdqm0ujy+fyGxOEAk8oAlcsAms0AmMwAkcnS6PO43O0AkMmXzOXo9PmPyONVsNfg8PdBqdQxpdLu9/t+wN/K5fHHhPk6AAAA8klEQVR4AazRwZqCMAxF4QiNlPYmgIgU5/3fczCfdKLO0rNq+zeLAn2hU9MG5nDu4qf1KTMAkaztGw/MqLGO3sZJ4NOLm5sA1sRWTrxrU5EFuZ2PXezTrse2Z3BLritDlucbEpBm8mVAb7Zq8o700gpwb6uWP1GAYquAf/A4YofjXFFjxfoxtlcMUnGGmBrayfkPaXuooQQ76LKhU3vK3fZRAd0OjQ8VIA10PFT2e3WWWSCFqI6mK7lZYBrq79yVU1lLWdelo1MQd5cuimciOf8s2pKrUUEtTfucb16UTYRTGei9W1+Sqoa7J1+MvyM+nQMAnnIQMvUA3IsAAAAASUVORK5CYII=" alt="Python" width="20" height="20" className="w-full h-full object-cover" />
               </div>
               <span className="text-stone-900 dark:text-stone-100 font-medium">Advanced Python Programming and Object-Oriented Thinking Course</span>
             </div>
@@ -205,7 +195,7 @@ export default function About() {
           <li className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
             <div className="flex items-center gap-3">
               <div className="w-5 h-5 bg-stone-200 dark:bg-stone-800 rounded-sm shrink-0 overflow-hidden flex items-center justify-center">
-                <img loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAVFBMVEX////6/f6x1+tsudwpotEAl8xitdqm0ujy+fyGxOEAk8oAlcsAms0AmMwAkcnS6PO43O0AkMmXzOXo9PmPyONVsNfg8PdBqdQxpdLu9/t+wN/K5fHHhPk6AAAA8klEQVR4AazRwZqCMAxF4QiNlPYmgIgU5/3fczCfdKLO0rNq+zeLAn2hU9MG5nDu4qf1KTMAkaztGw/MqLGO3sZJ4NOLm5sA1sRWTrxrU5EFuZ2PXezTrse2Z3BLritDlucbEpBm8mVAb7Zq8o700gpwb6uWP1GAYquAf/A4YofjXFFjxfoxtlcMUnGGmBrayfkPaXuooQQ76LKhU3vK3fZRAd0OjQ8VIA10PFT2e3WWWSCFqI6mK7lZYBrq79yVU1lLWdelo1MQd5cuimciOf8s2pKrUUEtTfucb16UTYRTGei9W1+Sqoa7J1+MvyM+nQMAnnIQMvUA3IsAAAAASUVORK5CYII=" alt="Python" width="20" height="20" className="w-full h-full object-cover" />
+                <BlurImage loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAVFBMVEX////6/f6x1+tsudwpotEAl8xitdqm0ujy+fyGxOEAk8oAlcsAms0AmMwAkcnS6PO43O0AkMmXzOXo9PmPyONVsNfg8PdBqdQxpdLu9/t+wN/K5fHHhPk6AAAA8klEQVR4AazRwZqCMAxF4QiNlPYmgIgU5/3fczCfdKLO0rNq+zeLAn2hU9MG5nDu4qf1KTMAkaztGw/MqLGO3sZJ4NOLm5sA1sRWTrxrU5EFuZ2PXezTrse2Z3BLritDlucbEpBm8mVAb7Zq8o700gpwb6uWP1GAYquAf/A4YofjXFFjxfoxtlcMUnGGmBrayfkPaXuooQQ76LKhU3vK3fZRAd0OjQ8VIA10PFT2e3WWWSCFqI6mK7lZYBrq79yVU1lLWdelo1MQd5cuimciOf8s2pKrUUEtTfucb16UTYRTGei9W1+Sqoa7J1+MvyM+nQMAnnIQMvUA3IsAAAAASUVORK5CYII=" alt="Python" width="20" height="20" className="w-full h-full object-cover" />
               </div>
               <span className="text-stone-900 dark:text-stone-100 font-medium">Task-Oriented Course in Fundamentals of Python Programming</span>
             </div>

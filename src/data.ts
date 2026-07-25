@@ -14,7 +14,7 @@ export const siteData = {
     avatar: '/assets/images/danial-eskandari-portrait.webp',
   },
   nav: [
-    { label: 'About', path: '/' },
+    { label: 'Home', path: '/' },
     { label: 'Publications', path: '/publications' },
     { label: 'Projects', path: '/projects' },
     { label: 'Honors & Awards', path: '/honors' },
@@ -33,11 +33,13 @@ export const publications = [
     venue: '15th International Conference on Computer and Knowledge Engineering (ICCKE 2025), Ferdowsi University of Mashhad',
     conference: '2025 15th International Conference on Computer and Knowledge Engineering (ICCKE)',
     authors: 'Amir Akhavan Saffar, Danial Eskandari Faruji, Javad Hamidzadeh',
+    keywords: ['Graph Attention Networks', 'Multi-Sensor Physiological Signals', 'ICU Event Prediction', 'Temporal Dependencies', 'Explainable AI in Critical Care'],
     excerpt: 'Utilizes Graph Attention Networks to model relationships across multiple sensors to provide early predictions for critical events in ICU patients.',
-    abstract: 'Timely prediction of critical events like sepsis, cardiac arrest, acute hypotension, respiratory failure, and atrial arrhythmia in Intensive Care Unit (ICU) patients is crucial for reducing mortality and enabling preemptive care. These events arise from complex physiological interactions, requiring advanced tools to detect early warning signs. We introduce a novel Graph Attention Network (GAT) framework that excels by exploiting inter-sensor relationships, dynamically tracking patient state changes with a multi-head attention mechanism, and using similarity edges to enable knowledge sharing among patients with similar profiles. The framework constructs patient-specific graphs with nodes representing physiological signals, including electrocardiogram (ECG), arterial blood pressure (ABP), oxygen saturation (SpO2), body temperature, respiratory rate, and heart rate variability (HRV), within 300-second windows. Edges reflect temporal sequences, physiological correlations, and inter-patient similarities, capturing unique patterns such as HRV drops in sepsis or ABP-respiratory synchronisation in hypotension, while addressing data sparsity. To enhance robustness and prevent data leakage, we employ KNN imputation, fitted solely on the training data, and use stratified 5-fold cross-validation at the patient level. An ablation study demonstrates the critical role of similarity edges, improving ROC-AUC by 8-10% compared to models without them. Evaluated on the HiRID dataset (900 admissions from University Hospital Zurich, Switzerland), MIMIC-IV (1,000 admissions from Beth Israel Deaconess Medical Centre, USA), and eICU (2,000 admissions from multiple US centres), the model applies Z-score normalization, utilizes a time-aware imputation strategy to prevent leakage, and tackles class imbalance using weighted cross-entropy combined with SMOTE on clinical features. Experiments yield a multi-class ROC-AUC of 0.94 ± 0.01 on HiRID, 0.92 on MIMIC-IV, and 0.91 on eICU, surpassing baselines.',
+    abstract: 'Timely prediction of critical events like sepsis, cardiac arrest, acute hypotension, respiratory failure, and atrial arrhythmia in Intensive Care Unit (ICU) patients is crucial for reducing mortality and enabling preemptive care. These events arise from complex physiological interactions, requiring advanced tools to detect early warning signs. We introduce a novel Graph Attention Network (GAT) framework that excels by exploiting inter-sensor relationships, dynamically tracking patient state changes with a multi-head attention mechanism, and using similarity edges to enable knowledge sharing among patients with similar profiles. The framework constructs patient-specific graphs with nodes representing physiological signals, including electrocardiogram (ECG), arterial blood pressure (ABP), oxygen saturation (SpO2), body temperature, respiratory rate, and heart rate variability (HRV), within 300-second windows. Edges reflect temporal sequences, physiological correlations, and inter-patient similarities, capturing unique patterns such as HRV drops in sepsis or ABP-respiratory synchronisation in hypotension, while addressing data sparsity. To enhance robustness and prevent data leakage, we employ KNN imputation, fitted solely on the training data, and use stratified 5-fold cross-validation at the patient level. An ablation study demonstrates the critical role of similarity edges, improving ROC-AUC by 8-10% compared to models without them. Evaluated on the HiRID dataset (900 admissions from University Hospital Zurich, Switzerland), MIMIC-IV (1,000 admissions from Beth Israel Deaconess Medical Centre, USA), and eICU (2,000 admissions from multiple US centres), the model applies Z-score normalization, utilizes a time-aware imputation strategy to prevent leakage, and tackles class imbalance using weighted cross-entropy combined with SMOTE on clinical features. Experiments yield a multi-class ROC-AUC of 0.94 ± 0.01 on HiRID, 0.92 on MIMIC-IV, and 0.91 on eICU, surpassing baselines...',
     url: 'https://www.researchgate.net/publication/398608780_Graph_Attention_Networks_for_Modelling_Multi-Sensor_Relationships_in_Early_Prediction_of_Critical_Events_in_ICU_Patients',
     ieeeUrl: 'https://ieeexplore.ieee.org/document/11273891',
-    codeUrl: 'https://github.com/Dnyesf/GAT-ICU-Prediction', relatedProject: 'gat-project',
+    codeUrl: 'https://github.com/Dnyesf/GAT-ICU-Prediction',
+    relatedProject: 'gat-project',
     image: '/assets/images/graph-attention-network.webp',
     citation: 'Amir Akhavan Saffar, Danial Eskandari Faruji, Javad Hamidzadeh, "Graph Attention Networks for Modelling Multi-Sensor Relationships in Early Prediction of Critical Events in ICU Patients", 2025 15th International Conference on Computer and Knowledge Engineering (ICCKE), October 2025.',
     bibtex: `@INPROCEEDINGS{11273891,
@@ -55,7 +57,6 @@ AU  - Hamidzadeh, Javad
 PY  - 2025
 DO  - 10.1109/ICCKE68588.2025.11273891
 ER  - `,
-    keywords: ['Graph Attention Networks', 'Intensive Care Unit', 'Early Prediction', 'Multi-Sensor Fusion', 'Deep Learning'],
   },
   {
     id: 'ptsd-detection-framework',
@@ -67,11 +68,13 @@ ER  - `,
     venue: '15th International Conference on Computer and Knowledge Engineering (ICCKE 2025), IEEE Iran Section',
     conference: '2025 15th International Conference on Computer and Knowledge Engineering (ICCKE)',
     authors: 'Danial Eskandari Faruji, Amir Akhavan Saffar, Mobina Ansari Astaneh',
+    keywords: ['PTSD Detection', 'EEG', 'Multimodal Fusion', 'Sleep Analysis', 'CNN-BiLSTM'],
     excerpt: 'Developed a multimodal deep learning architecture integrating EEG signals and physiological biosignals for automated PTSD detection during sleep. The framework explores biosignal fusion strategies and advanced neural network models to improve diagnostic accuracy and robustness in mental health monitoring systems.',
     abstract: 'We introduce a multimodal deep learning framework designed for automated detection of Post-Traumatic Stress Disorder (PTSD) severity during sleep, leveraging the fusion of EEG spectrograms and ECG-derived heart rate variability (HRV). Utilizing overnight polysomnographic (PSG) recordings from a cohort of 44 subjects, our hybrid CNN-BiLSTM architecture, enhanced by a multi-head attention fusion module, effectively captures neurophysiological and autonomic biomarkers specific to PTSD, such as REM-related theta activity and HRV dysregulation. The model was rigorously evaluated using subject-wise 10-fold cross-validation, reporting performance metrics as mean ± standard deviation across folds, alongside leave-one-subject-out (LOSO) validation to ensure robustness. Ablation studies and interpretability analyses, including attention maps, Grad-CAM, and SHAP, reveal that the model prioritizes key features like theta power (4–8 Hz) during REM sleep and LF/HF HRV ratios for accurate PTSD classification. Despite the promising results, the modest dataset size highlights the need for larger cohorts to enhance generalizability. This framework offers a scalable, non-invasive solution for clinical diagnostics, with potential integration into wearable devices, thereby paving the way for real-time mental health monitoring while outlining future strategies for enhanced generalization and clinical translation.',
     url: 'https://www.researchgate.net/publication/398603177_Multimodal_Deep_Learning_Framework_for_PTSD_Detection_during_Sleep_via_EEG_and_Biosignal_Fusion',
     ieeeUrl: 'https://ieeexplore.ieee.org/document/11273859',
-    codeUrl: 'https://github.com/Dnyesf/PTSD-Detection-EEG-ECG-HRV', relatedProject: 'ptsd-project',
+    codeUrl: 'https://github.com/Dnyesf/PTSD-Detection-EEG-ECG-HRV',
+    relatedProject: 'ptsd-project',
     image: '/assets/images/ptsd-eeg-framework.webp',
     citation: 'Danial Eskandari Faruji, Amir Akhavan Saffar, Mobina Ansari Astaneh, "Multimodal Deep Learning Framework for PTSD Detection during Sleep via EEG and Biosignal Fusion", 2025 15th International Conference on Computer and Knowledge Engineering (ICCKE), October 2025.',
     bibtex: `@INPROCEEDINGS{11273859,
@@ -89,7 +92,6 @@ AU  - Ansari Astaneh, Mobina
 PY  - 2025
 DO  - 10.1109/ICCKE68588.2025.11273859
 ER  - `,
-    keywords: ['PTSD Detection', 'Multimodal Deep Learning', 'EEG', 'Biosignal Fusion', 'Sleep Analysis'],
   },
   {
     id: 'ocd-reinforcement-learning',
@@ -174,7 +176,7 @@ Scalable oversight is not a silver bullet, but it represents a crucial shift in 
   },
   {
     id: 'cross-layer-attention',
-    title: 'Implementing Cross-Layer Attention in Volumetric Medical Segmentation', relatedProject: 'gat-project',
+    title: 'Implementing Cross-Layer Attention in Volumetric Medical Segmentation',
     date: 'January 20, 2024',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThYUrIhABLa71kqjO24kgA2ETqHx-lDsE8-JhsKimziaxO6LvP9JBFVGuj&s=10',
     excerpt: 'A deep dive into our recent Nature Machine Intelligence paper on bridging semantic features in medical imaging.',

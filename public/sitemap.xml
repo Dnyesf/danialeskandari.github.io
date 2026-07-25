@@ -3,7 +3,12 @@
   <url>
     <loc>https://danialeskandari.com/</loc>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://danialeskandari.com/projects</loc>
@@ -24,5 +29,55 @@
     <loc>https://danialeskandari.com/honors</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/publications/gat-icu-prediction</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/publications/ptsd-detection-framework</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/publications/ocd-reinforcement-learning</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/publications/snn-framework-fpga</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/publications/cloud-native-conversational-ai</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/projects/ptsd-project</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/projects/gat-project</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/blog/scalable-oversight-llm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://danialeskandari.com/blog/cross-layer-attention</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

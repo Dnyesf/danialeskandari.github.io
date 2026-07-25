@@ -63,15 +63,49 @@ export function useSEO({
       document.head.appendChild(scriptTag);
     }
 
+    // Generate BreadcrumbList based on path
+    const pathParts = currentPath.split('/').filter(Boolean);
+    const breadcrumbItems = [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://danialeskandari.com/"
+      }
+    ];
+
+    let currentUrl = "https://danialeskandari.com";
+    pathParts.forEach((part, index) => {
+      currentUrl += `/${part}`;
+      let name = part.charAt(0).toUpperCase() + part.slice(1);
+      
+      // If it's the last part, use the page title
+      if (index === pathParts.length - 1) {
+        name = title.split(' | ')[0];
+      }
+      
+      breadcrumbItems.push({
+        "@type": "ListItem",
+        "position": index + 2,
+        "name": name,
+        "item": currentUrl
+      });
+    });
+
     const baseJsonLd = [
       {
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://danialeskandari.com/#person",
         "name": "Danial Eskandari Faruji",
         "jobTitle": "AI Researcher",
         "affiliation": {
           "@type": "Organization",
           "name": "Computer Engineering @ HSU"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Hakim Sabzevari University"
         },
         "email": "dn.eskandarifaruji@gmail.com",
         "url": "https://danialeskandari.com",
@@ -80,31 +114,51 @@ export function useSEO({
           "https://scholar.google.com/citations?hl=en&user=6ihGka8AAAAJ",
           "https://ir.linkedin.com/in/dnyesf",
           "https://x.com/Dnyesf"
-        ]
+        ],
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://danialeskandari.com/assets/images/danial-eskandari-portrait.webp",
+          "caption": "Danial Eskandari Faruji"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "dateCreated": "2024-01-01T12:00:00Z",
+        "dateModified": new Date().toISOString(),
+        "mainEntity": {
+          "@id": "https://danialeskandari.com/#person"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "CollegeOrUniversity",
+        "@id": "https://danialeskandari.com/#HakimSabzevariUniversity",
+        "name": "Hakim Sabzevari University",
+        "url": "https://hsu.ac.ir"
       },
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": "https://danialeskandari.com/#website",
         "name": "Danial AI",
         "url": "https://danialeskandari.com"
       },
       {
         "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}/#webpage`,
+        "url": canonicalUrl,
+        "name": title,
+        "description": description,
+        "isPartOf": {
+          "@id": "https://danialeskandari.com/#website"
+        }
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://danialeskandari.com/"
-          },
-          ...(currentPath !== '/' ? [{
-            "@type": "ListItem",
-            "position": 2,
-            "name": title.split(' | ')[0],
-            "item": canonicalUrl
-          }] : [])
-        ]
+        "itemListElement": breadcrumbItems
       }
     ];
 
